@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.biography {
+    text-align: center;
+    width: 50%;
+    /* set the width to a specific value or 100% */
+    margin: 60px auto;
+}
+
+.biography img {
+    height: 250px;
+}
