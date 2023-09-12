@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <style>
+        .container{
+            margin: 20px;
+            padding: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        
+            <form action="#" id="form">
+                <input type="text" name="firstName" id="firstName" placeholder="First Name"><br>
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name"><br>
+                <input type="email" name="email" id="email" placeholder="E-mail Address"><br>
+                <input type="password" name="password" id="password" placeholder="Password"><br>
+                <button type="submit" id="btn">Submit</button>
+            </form>
+           
+           
+       
+    </div> 
+    <script>
+      document.getElementById("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const formData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: password,
+        };
+
+        localStorage.setItem(JSON.stringify(formData));
+
+        document.getElementById("form").reset();
+
+        alert("successful!");
+      });
+
+    </script>
+</body>
+</html>
